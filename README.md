@@ -1,5 +1,6 @@
 # Python Wrapper for the Guardian API
 
+```ruby
     >>> from guardian import Guardian
     >>> g = Guardian()
     >>> g('twitter')
@@ -8,3 +9,4 @@
     {u'sectionName': u'Football', u'webTitle': u'Why the future of English football should not be about John Beck | Daniel Taylor', u'webUrl': u'http://www.theguardian.com/football/blog/2013/oct/05/english-football-john-beck-fa-coaching', u'apiUrl': u'http://content.guardianapis.com/football/blog/2013/oct/05/english-football-john-beck-fa-coaching', u'webPublicationDate': u'2013-10-05T21:01:01Z', u'id': u'football/blog/2013/oct/05/english-football-john-beck-fa-coaching', u'sectionId': u'football'}
     >>> g('twitter', section='technology')
     [{u'sectionName': u'Technology', u'webTitle': u'Is Twitter worth a flutter?', u'webUrl': u'http://www.theguardian.com/technology/2013/oct/06/is-twitter-worth-a-flutter', u'apiUrl': u'http://content.guardianapis.com/technology/2013/oct/06/is-twitter-worth-a-flutter', u'webPublicationDate': u'2013-10-05T23:05:54Z', u'id': u'technology/2013/oct/06/is-twitter-worth-a-flutter', u'sectionId': u'technology'}]
+```
