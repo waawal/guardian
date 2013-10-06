@@ -11,7 +11,7 @@ class Guardian(object):
         payload = {}
         for k, v in kw.items():
             payload[k.replace('_','-')] = v
-        return requests.get(self.ITEM+id, params=payload).json()['response']['content']
+        return requests.get(self.ITEM+id, params=payload).json()['response'].get('content')
 
     def search(self, q=None, **kw):
         if  q is None:
@@ -20,13 +20,13 @@ class Guardian(object):
             payload = {'q': q}
         for k, v in kw.items():
             payload[k.replace('_','-')] = v
-        return requests.get(self.SEARCH, params=payload).json()['response']['results']
+        return requests.get(self.SEARCH, params=payload).json()['response'].get('results')
 
     def tags(self, **kw):
         payload = {}
         for k, v in kw.items():
             payload[k.replace('_','-')] = v
-        return requests.get(self.TAGS, params=payload).json()['response']['results']
+        return requests.get(self.TAGS, params=payload).json()['response'].get('results')
 
     def __call__(self, q, **kw):
         return self.search(q=q, **kw)
